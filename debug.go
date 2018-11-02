@@ -37,6 +37,8 @@ func writeDebugHeader(w io.Writer) error {
 	"strings"
 )
 
+type Empty struct {}
+
 // bindataRead reads the given file from disk. It returns an error on failure.
 func bindataRead(path, name string) ([]byte, error) {
 	buf, err := ioutil.ReadFile(path)

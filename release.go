@@ -212,7 +212,9 @@ func header_uncompressed_memcopy(w io.Writer) error {
 }
 
 func header_release_common(w io.Writer) error {
-	_, err := fmt.Fprintf(w, `type asset struct {
+	_, err := fmt.Fprintf(w, `type Empty struct {}
+
+type asset struct {
 	bytes []byte
 	info  os.FileInfo
 }
